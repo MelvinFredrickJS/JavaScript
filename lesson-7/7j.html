@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator
+  </title>
+</head>
+<body>
+<button onclick="calculations(1)">1</button>
+<button onclick="calculations(2)">2</button>
+<button onclick="calculations(3)">3</button>
+<button onclick="calculations('+')">+</button>
+<button onclick="calculations('=')">=</button>
+  <script>
+    let calculation=""
+    function calculations(num){
+      if(num===1){
+        calculation+='+1'
+       console.log(calculation)
+      }else if(num===2){
+        calculation+='+2'
+        console.log(calculation)
+      }else if(num===3){
+        calculation+='+3'
+        console.log(calculation)
+      }else if(num==='+'){
+        calculation+='+'
+        console.log(calculation)
+      }else if(num==='='){
+        calculation=eval(calculation)
+        console.log(calculation)
+      }
+      
+    }
+  </script>
+</body>
+</html>
