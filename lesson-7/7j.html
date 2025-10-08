@@ -10,7 +10,7 @@
 <button onclick="calculations(1)">1</button>
 <button onclick="calculations(2)">2</button>
 <button onclick="calculations(3)">3</button>
-<button onclick="calculations('+')">+</button>
+<button onclick="calculations('+ ')">+</button>
 <button onclick="calculations('=')">=</button>
   <script>
     let calculation=""
@@ -27,7 +27,7 @@
       }else if(num==='+'){
         calculation+='+'
         console.log(calculation)
-      }else if(num==='='){
+      }else if(num==='= '){
         calculation=eval(calculation)
         console.log(calculation)
       }
