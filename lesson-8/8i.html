@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Flip</title>
+</head>
+<body>
+  <h2>Guess Head Or Tail</h2>
+  <button onclick="playGame('heads');
+   ">Head</button>
+  <button onclick="playGame('tails')">Tail</button>
+  <button onclick="score.wins=0,score.losses=0,localStorage.setItem('result',JSON.stringify(score))">Reset</button>
+  <script>
+    let num=Math.random();
+    const result=num<0.5?'heads':'tails';
+    console.log(`The Computer has selected ${result}`);
+    let guess;
+
+    const score=JSON.parse(localStorage.getItem('result'))||{
+      wins:0,
+      losses:0
+    }
+
+      function playGame(guess){
+      (guess===result)?alert(`!Win!, you have won:${score.wins++} times`):alert(`!Lost!, you have lost: ${score.losses++} times`);
+       localStorage.setItem('result',JSON.stringify(score))
+    }
+  </script>
+</body>
+</html>
