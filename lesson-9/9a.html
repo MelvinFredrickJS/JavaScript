@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button onclick="result('heads')">heads</button>
+  <button onclick="result('tails')">tails</button>
+
+  <p class="js-choosen"></p>
+  <button onclick="fun()">9a</button>
+  <button class="js-button" onclick="sec()">9b</button>
+  <script>
+    function result(res){
+      document.querySelector('.js-choosen').innerHTML=`you have choosen: ${res}`;
+    }
+
+    function fun(){
+      console.log(document.querySelector('button'))
+    }
+
+
+    function sec(){
+      const buttonelement=document.querySelector('.js-button');
+      buttonelement.innerHTML='9b done!'
+    }
+  </script>
+</body>
+</html>
